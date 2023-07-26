@@ -41,8 +41,10 @@ public class cardController{
         movieName.setText(movie.getName());
         movieGenre.setText(movie.getGenre());
         movieRating.setText(movie.getRating());
-        box.setStyle("-fx-background-color: #"+ colors[(int)Math.random()*colors.length]+";"
-        +"-fx-background-radius: 10;"+"-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1),10,0,0,10);");
+        box.setStyle("-fx-background-color: #" + colors[(int) (Math.random() * colors.length)] + ";"
+                + "-fx-background-radius: 10;" + "-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1),10,0,0,10);");
+
+
 
     }
 }

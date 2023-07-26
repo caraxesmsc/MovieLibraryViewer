@@ -40,13 +40,15 @@ public class HelloController implements Initializable {
             movieCardController cardContainerController = fxmlLoader.getController();
             cardContainerController.setData(movie);
             movieContainer.getChildren().add(cardcontainer);
-
+            GridPane.setMargin(cardcontainer, new Insets(10));
+            GridPane.setColumnIndex(cardcontainer, coloumn);
+            GridPane.setRowIndex(cardcontainer, row);
+            coloumn++;
             if (coloumn==6){
                 coloumn=0;
                 ++row;
             }
-            movieContainer.add(cardcontainer,coloumn++,row);
-            GridPane.setMargin(cardcontainer,new Insets(10));
+
         }
 
     }catch(IOException e){
@@ -62,7 +64,7 @@ public class HelloController implements Initializable {
         movie.setName("Avengers Endgame");
         movie.setDateAdded(new Date(2023,Calendar.JULY,1));
         movie.setGenre("Superhero");
-        movie.setImgsrc("img/endgme.jpeg");
+        movie.setImgsrc("/img/endgme.jpeg");
         movie.setRating("4");
         movie.setWatched(true);
         ls.add(movie);
@@ -71,7 +73,7 @@ public class HelloController implements Initializable {
         movie.setName("Oppenheimer");
         movie.setDateAdded(new Date(2023, Calendar.JULY,5));
         movie.setGenre("Historic");
-        movie.setImgsrc("img/oppenhiemer.jpg");
+        movie.setImgsrc("/img/oppenhiemer.jpg");
         movie.setRating("4.5");
         movie.setWatched(true);
         ls.add(movie);
@@ -79,7 +81,7 @@ public class HelloController implements Initializable {
         movie.setName("Oppenheimer");
         movie.setDateAdded(new Date(2023, Calendar.JULY,23));
         movie.setGenre("Historic");
-        movie.setImgsrc("img/oppenhiemer.jpg");
+        movie.setImgsrc("/img/oppenhiemer.jpg");
         movie.setRating("4.5");
         movie.setWatched(true);
         ls.add(movie);
@@ -87,7 +89,7 @@ public class HelloController implements Initializable {
         movie.setName("Oppenheimer");
         movie.setDateAdded(new Date(2023, Calendar.JULY,5));
         movie.setGenre("Historic");
-        movie.setImgsrc("img/oppenhiemer.jpg");
+        movie.setImgsrc("/img/oppenhiemer.jpg");
         movie.setRating("4.5");
         movie.setWatched(true);
         ls.add(movie);
@@ -106,35 +108,20 @@ public class HelloController implements Initializable {
         movie.setName("Avengers Endgame");
         movie.setDateAdded(new Date(2023,Calendar.JULY,1));
         movie.setGenre("Superhero");
-        movie.setImgsrc("img/endgme.jpeg");
+        movie.setImgsrc("/img/endgme.jpeg");
         movie.setRating("4");
         movie.setWatched(true);
         am.add(movie);
 
         movie = new Movie();
-        movie.setName("Oppenheimer");
-        movie.setDateAdded(new Date(2023, Calendar.JULY,5));
+        movie.setName("Oppenheimer222");
+        movie.setDateAdded(new Date(2023, Calendar.JULY,15));
         movie.setGenre("Historic");
-        movie.setImgsrc("img/oppenhiemer.jpg");
-        movie.setRating("4.5");
+        movie.setImgsrc("/img/oppenhiemer.jpg");
+        movie.setRating("4.56");
         movie.setWatched(true);
         am.add(movie);
-        movie = new Movie();
-        movie.setName("Oppenheimer");
-        movie.setDateAdded(new Date(2023, Calendar.JULY,23));
-        movie.setGenre("Historic");
-        movie.setImgsrc("img/oppenhiemer.jpg");
-        movie.setRating("4.5");
-        movie.setWatched(true);
-        am.add(movie);
-        movie = new Movie();
-        movie.setName("Oppenheimer");
-        movie.setDateAdded(new Date(2023, Calendar.JULY,5));
-        movie.setGenre("Historic");
-        movie.setImgsrc("img/oppenhiemer.jpg");
-        movie.setRating("4.5");
-        movie.setWatched(true);
-        am.add(movie);
+
         Collections.sort(am, Movie.NAME_COMPARATOR);
 
         // Now the movies list is sorted based on their dateAdded

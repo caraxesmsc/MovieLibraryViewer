@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bce486a-9825-4209-bf8d-7b07dd56840b" name="Changes" comment="fixed some errors regarding nulls">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4bce486a-9825-4209-bf8d-7b07dd56840b" name="Changes" comment="added all movies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/cardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/cardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +30,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
   "associatedIndex": -1
 }]]></component>
   <component name="ProjectId" id="2T5MFPuPCsKw5R4fQXbKjmqjtzQ" />
@@ -159,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690385521491</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added all movies">
+      <option name="closed" value="true" />
+      <created>1690391953874</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1690391953874</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,7 +201,8 @@
     <MESSAGE value="Arraylist for Recently added" />
     <MESSAGE value="fixed some errors regarding null pointers" />
     <MESSAGE value="fixed some errors regarding nulls" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some errors regarding nulls" />
+    <MESSAGE value="added all movies" />
+    <option name="LAST_COMMIT_MESSAGE" value="added all movies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
