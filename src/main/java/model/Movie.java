@@ -1,8 +1,9 @@
 package model;
 
+import java.util.Comparator;
 import java.util.Date;
 
-public class Movie {
+public class Movie  {
     private String name;
     private String genre;
     private String rating;
@@ -57,5 +58,8 @@ public class Movie {
     public void setDateAdded(Date dateAdded) {
         this.dateAdded = dateAdded;
     }
+
+   // Custom comparator to sort movies based on dateAdded
+    public static final Comparator<Movie> DATE_ADDED_COMPARATOR = Comparator.comparing(Movie::getDateAdded);
 
 }

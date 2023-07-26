@@ -19,7 +19,7 @@
             </Label>
             <ScrollPane prefHeight="146.0" prefWidth="539.0">
                <content>
-                  <HBox fx:id="cardLayoutRecent" alignment="CENTER_LEFT" prefHeight="124.0" prefWidth="541.0" spacing="10.0" style="-fx-background-color: #121212;">
+                  <HBox fx:id="cardLayoutRecent" alignment="CENTER_LEFT" prefHeight="124.0" prefWidth="541.0" spacing="10.0" style="-fx-background-color: #121212; -fx-border-color: #121212;">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding></HBox>

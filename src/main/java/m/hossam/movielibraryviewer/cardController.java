@@ -4,9 +4,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import javafx.scene.layout.HBox;
 import model.Movie;
 
+import java.net.URL;
 import java.util.Objects;
 
 public class cardController{
@@ -29,22 +33,23 @@ public class cardController{
     try {
         String imgSrc = movie.getImgsrc();
         if (imgSrc != null) {
-            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(imgSrc)));
+            Image image = new Image(getClass().getResourceAsStream(imgSrc));
             moviePoster.setImage(image);
         }else {
             // Set a default image or handle the case when imgSrc is null.
-            Image defaultImage = new Image(getClass().getResourceAsStream("m/hossam/movielibraryviewer/untit.png"));
+            Image defaultImage = new Image(getClass().getResourceAsStream("img/untit.png"));
              moviePoster.setImage(defaultImage);
         }
-    } catch (NullPointerException e) {
+
+    } catch (Exception e) {
         // Handle the exception, for example, log the error or set a default image.
-        e.printStackTrace();
+        System.out.print(e);
     }
         movieName.setText(movie.getName());
         movieGenre.setText(movie.getGenre());
         movieRating.setText(movie.getRating());
         box.setStyle("-fx-background-color: #"+ colors[(int)Math.random()*colors.length]+";"
-        +"-fx-background-radius: 15;"+"-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1),10,0,0,10);");
+        +"-fx-background-radius: 10;"+"-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1),10,0,0,10);");
 
     }
 }

@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import javafx.scene.image.ImageView;
 import model.Movie;
 
 import java.io.IOException;
@@ -34,13 +35,13 @@ public class HelloController implements Initializable {
     }
     private List<Movie> recentlyAdded;
 
-    private List<Movie> recentlyAdded(){
+    private List<Movie> recentlyAdded() {
         List<Movie> ls = new ArrayList<>();
         Movie movie = new Movie();
         movie.setName("Avengers Endgame");
         movie.setDateAdded(new Date(2023,Calendar.JULY,1));
         movie.setGenre("Superhero");
-        movie.setImgsrc("C:\\Users\\mdzhs\\OneDrive\\Documents\\Programming Projects\\MovieLibraryViewer\\MovieLibraryViewer\\src\\img\\endgme.jpeg");
+        movie.setImgsrc("img/endgme.jpeg");
         movie.setRating("4");
         movie.setWatched(true);
         ls.add(movie);
@@ -49,12 +50,15 @@ public class HelloController implements Initializable {
         movie.setName("Oppenheimer");
         movie.setDateAdded(new Date(2023, Calendar.JULY,5));
         movie.setGenre("Historic");
-        movie.setImgsrc("C:\\Users\\mdzhs\\OneDrive\\Documents\\Programming Projects\\MovieLibraryViewer\\MovieLibraryViewer\\src\\img\\oppenhiemer.jpg");
+        movie.setImgsrc("img/oppenhiemer.jpg");
         movie.setRating("4.5");
         movie.setWatched(true);
         ls.add(movie);
 
+// Sort the movies based on their dateAdded using the custom comparator
+        Collections.sort(ls, Movie.DATE_ADDED_COMPARATOR.reversed());
 
+        // Now the movies list is sorted based on their dateAdded
         return ls;
     }
 }

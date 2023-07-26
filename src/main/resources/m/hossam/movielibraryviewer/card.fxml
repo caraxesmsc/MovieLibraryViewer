@@ -2,21 +2,17 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: E1BEE7;" stylesheets="@../../../../java/m/hossam/movielibraryviewer/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m.hossam.movielibraryviewer.cardController">
+<HBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: E1BEE7;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m.hossam.movielibraryviewer.cardController">
    <children>
       <ImageView fx:id="moviePoster" fitHeight="90.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
          <HBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </HBox.margin>
-         <image>
-            <Image url="@../../../../../img/endgme.jpeg" />
-         </image>
       </ImageView>
       <VBox prefHeight="92.0" prefWidth="80.0">
          <children>
