@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bce486a-9825-4209-bf8d-7b07dd56840b" name="Changes" comment="fixed some errors regarding null pointers">
+    <list default="true" id="4bce486a-9825-4209-bf8d-7b07dd56840b" name="Changes" comment="fixed some errors regarding nulls">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/endgme.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/img/endgme.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/oppenhiemer.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/img/oppenhiemer.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/cardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/cardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/card.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,15 +20,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloController.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": -1
+}]]></component>
   <component name="ProjectId" id="2T5MFPuPCsKw5R4fQXbKjmqjtzQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -42,20 +46,20 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/mdzhs/OneDrive/Documents/Programming Projects/MovieLibraryViewer/MovieLibraryViewer/src/main/resources/img",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mdzhs/OneDrive/Documents/Programming Projects/MovieLibraryViewer/MovieLibraryViewer/src/main/resources/img&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="model" />
@@ -69,6 +73,7 @@
       <recent name="C:\Users\mdzhs\OneDrive\Documents\Programming Projects\MovieLibraryViewer\MovieLibraryViewer\src\main\java\m\hossam\movielibraryviewer" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="m.hossam.movielibraryviewer" />
       <recent name="" />
     </key>
   </component>
@@ -146,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690377484692</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed some errors regarding nulls">
+      <option name="closed" value="true" />
+      <created>1690385521491</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690385521491</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,7 +192,8 @@
     <MESSAGE value="code for Recently added movies" />
     <MESSAGE value="Arraylist for Recently added" />
     <MESSAGE value="fixed some errors regarding null pointers" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some errors regarding null pointers" />
+    <MESSAGE value="fixed some errors regarding nulls" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed some errors regarding nulls" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

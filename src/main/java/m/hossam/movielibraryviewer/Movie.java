@@ -1,4 +1,4 @@
-package model;
+package m.hossam.movielibraryviewer;
 
 import java.util.Comparator;
 import java.util.Date;
@@ -61,5 +61,5 @@ public class Movie  {
 
    // Custom comparator to sort movies based on dateAdded
     public static final Comparator<Movie> DATE_ADDED_COMPARATOR = Comparator.comparing(Movie::getDateAdded);
-
+    public static final Comparator<Movie> NAME_COMPARATOR = Comparator.comparing(Movie::getName);
 }
