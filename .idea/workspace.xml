@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bce486a-9825-4209-bf8d-7b07dd56840b" name="Changes" comment="Layout for Recently added movies">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/cardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/cardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/card.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="4bce486a-9825-4209-bf8d-7b07dd56840b" name="Changes" comment="code for Recently added movies" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690332158444</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="code for Recently added movies">
+      <created>1690332931807</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690332931807</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,6 +111,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="Layout in Scenebuilder" />
     <MESSAGE value="Layout for Recently added movies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Layout for Recently added movies" />
+    <MESSAGE value="code for Recently added movies" />
+    <option name="LAST_COMMIT_MESSAGE" value="code for Recently added movies" />
   </component>
 </project>

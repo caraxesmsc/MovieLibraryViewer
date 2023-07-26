@@ -19,7 +19,7 @@
             </Label>
             <ScrollPane prefHeight="105.0" prefWidth="570.0">
                <content>
-                  <HBox fx:id="cardLayoutRecent" prefHeight="104.0" prefWidth="541.0" styleClass="transpare" />
+                  <HBox fx:id="cardLayoutRecent" prefHeight="100.0" prefWidth="541.0" styleClass="transpare" />
                </content>
             </ScrollPane>
          </children>
