@@ -7,10 +7,27 @@ import javafx.geometry.Insets;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import org.mp4parser.IsoFile;
+import org.mp4parser.boxes.iso14496.part12.MovieHeaderBox;
+import org.mp4parser.boxes.iso14496.part12.TrackBox;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.List;
+import java.util.Properties;
 
 public class HelloController implements Initializable {
 
@@ -89,7 +106,7 @@ public class HelloController implements Initializable {
         movie.setName("Oppenheimer");
         movie.setDateAdded(new Date(2023, Calendar.JULY,5));
         movie.setGenre("Historic");
-        movie.setImgsrc("/img/oppenhiemer.jpg");
+        movie.setImgsrc("/img/untit.jpg");
         movie.setRating("4.5");
         movie.setWatched(true);
         ls.add(movie);
@@ -104,27 +121,39 @@ public class HelloController implements Initializable {
     }
     private List<Movie> allMovies() {
         List<Movie> am = new ArrayList<>();
-        Movie movie = new Movie();
-        movie.setName("Avengers Endgame");
-        movie.setDateAdded(new Date(2023,Calendar.JULY,1));
-        movie.setGenre("Superhero");
-        movie.setImgsrc("/img/endgme.jpeg");
-        movie.setRating("4");
-        movie.setWatched(true);
-        am.add(movie);
 
-        movie = new Movie();
-        movie.setName("Oppenheimer222");
-        movie.setDateAdded(new Date(2023, Calendar.JULY,15));
-        movie.setGenre("Historic");
-        movie.setImgsrc("/img/oppenhiemer.jpg");
-        movie.setRating("4.56");
-        movie.setWatched(true);
-        am.add(movie);
+        try {
+            String userHome = System.getProperty("user.home");
+            String propertiesFilePath = userHome + File.separator + "your-properties-file.properties";
 
+            Properties properties = new Properties();
+            FileInputStream inputStream = new FileInputStream(propertiesFilePath);
+            properties.load(inputStream);
+            inputStream.close();
+
+            // Read properties and create movie objects
+            int movieCount = Integer.parseInt(properties.getProperty("movie.count"));
+            for (int i = 1; i <= movieCount; i++) {
+                Movie movie = new Movie();
+                movie.setName(properties.getProperty("movie." + i + ".name"));
+//                movie.setDateAdded(new Date(Long.parseLong(properties.getProperty("movie." + i + ".dateModified"))));
+//                movie.setGenre(properties.getProperty("movie." + i + ".genre"));
+//                movie.setImgsrc(properties.getProperty("movie." + i + ".imgsrc"));
+//                movie.setRating(properties.getProperty("movie." + i + ".rating"));
+//                movie.setWatched(Boolean.parseBoolean(properties.getProperty("movie." + i + ".watched")));
+
+                am.add(movie);
+            }
+        } catch (Exception e) {
+            System.out.println("Error reading properties from file: " + file.getName());
+            e.printStackTrace();
+            }
+
+
+
+        // Sort the movies based on their name using the custom comparator
         Collections.sort(am, Movie.NAME_COMPARATOR);
 
-        // Now the movies list is sorted based on their dateAdded
         return am;
     }
 }
