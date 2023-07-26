@@ -9,20 +9,12 @@ import model.Movie;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class HelloController implements Initializable {
-    @FXML
-    private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
-
+    private HBox cardLayoutRecent;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
     recentlyAdded = new ArrayList<>(recentlyAdded());
@@ -40,28 +32,29 @@ public class HelloController implements Initializable {
     }
 
     }
-    @FXML
-    private HBox cardLayoutRecent;
     private List<Movie> recentlyAdded;
+
     private List<Movie> recentlyAdded(){
         List<Movie> ls = new ArrayList<>();
         Movie movie = new Movie();
         movie.setName("Avengers Endgame");
-        movie.setDateAdded(new Date(2023,8,5));
+        movie.setDateAdded(new Date(2023,Calendar.JULY,1));
         movie.setGenre("Superhero");
-        movie.setImgsrc("/src/img/endgame.jpeg");
+        movie.setImgsrc("C:\\Users\\mdzhs\\OneDrive\\Documents\\Programming Projects\\MovieLibraryViewer\\MovieLibraryViewer\\src\\img\\endgme.jpeg");
         movie.setRating("4");
         movie.setWatched(true);
         ls.add(movie);
 
         movie = new Movie();
         movie.setName("Oppenheimer");
-        movie.setDateAdded(new Date(2023,9,5));
+        movie.setDateAdded(new Date(2023, Calendar.JULY,5));
         movie.setGenre("Historic");
-        movie.setImgsrc("/src/img/oppenhiemer.jpg");
+        movie.setImgsrc("C:\\Users\\mdzhs\\OneDrive\\Documents\\Programming Projects\\MovieLibraryViewer\\MovieLibraryViewer\\src\\img\\oppenhiemer.jpg");
         movie.setRating("4.5");
         movie.setWatched(true);
         ls.add(movie);
+
+
         return ls;
     }
 }

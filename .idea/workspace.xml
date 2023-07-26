@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bce486a-9825-4209-bf8d-7b07dd56840b" name="Changes" comment="code for Recently added movies">
+    <list default="true" id="4bce486a-9825-4209-bf8d-7b07dd56840b" name="Changes" comment="Arraylist for Recently added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/New Text Document (2).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/New Text Document.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/cardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/cardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/card.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/m/hossam/movielibraryviewer/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +49,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mdzhs\OneDrive\Documents\Programming Projects\MovieLibraryViewer\MovieLibraryViewer\src\main\java\m\hossam\movielibraryviewer" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -92,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690333126137</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Arraylist for Recently added">
+      <created>1690374107134</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690374107134</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +138,17 @@
     <MESSAGE value="Layout in Scenebuilder" />
     <MESSAGE value="Layout for Recently added movies" />
     <MESSAGE value="code for Recently added movies" />
-    <option name="LAST_COMMIT_MESSAGE" value="code for Recently added movies" />
+    <MESSAGE value="Arraylist for Recently added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arraylist for Recently added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassNotFoundException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

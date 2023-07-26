@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m.hossam.movielibraryviewer.HelloController">
    <children>
       <VBox layoutX="33.0" layoutY="41.0" prefHeight="347.0" prefWidth="539.0">
          <children>
@@ -17,9 +16,9 @@
                   <Font name="Segoe UI" size="12.0" />
                </font>
             </Label>
-            <ScrollPane prefHeight="105.0" prefWidth="570.0">
+            <ScrollPane prefHeight="146.0" prefWidth="539.0">
                <content>
-                  <HBox fx:id="cardLayoutRecent" prefHeight="100.0" prefWidth="541.0" styleClass="transpare" />
+                  <HBox fx:id="cardLayoutRecent" alignment="CENTER" prefHeight="124.0" prefWidth="541.0" spacing="10.0" style="-fx-background-color: #121212;" />
                </content>
             </ScrollPane>
          </children>
