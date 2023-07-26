@@ -57,4 +57,5 @@ public class Movie {
     public void setDateAdded(Date dateAdded) {
         this.dateAdded = dateAdded;
     }
+
 }
