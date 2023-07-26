@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="m.hossam.movielibraryviewer.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="33.0" layoutY="41.0" prefHeight="347.0" prefWidth="539.0">
+         <children>
+            <Label prefHeight="24.0" prefWidth="114.0" style="-fx-text-fill: #EA80FC;" text="Recently Added" textFill="#d500f9">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="105.0" prefWidth="570.0">
+               <content>
+                  <HBox fx:id="cardLayoutRecent" prefHeight="104.0" prefWidth="541.0" styleClass="transpare" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <HBox layoutX="1.0" layoutY="5.0" prefHeight="36.0" prefWidth="598.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="36.0" prefWidth="86.0" style="-fx-text-fill: #D500F9;" text="My Library" textFill="#d500f9">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
