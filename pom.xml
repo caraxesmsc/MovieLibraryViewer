@@ -14,11 +14,7 @@
     <junit.version>5.9.2</junit.version>      </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>com.googlecode.mp4parser</groupId>
-      <artifactId>isoparser</artifactId>
-      <version>1.1.26</version>
-    </dependency>
+
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
@@ -41,7 +37,15 @@
       <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
-    </dependency>              </dependencies>
+    </dependency>
+    <dependency>
+      <groupId>org.bytedeco</groupId>
+      <artifactId>javacpp-ffmpeg</artifactId>
+      <version>1.5.6-1.5.6</version>
+    </dependency>
+
+
+  </dependencies>
 
   <build>
         <plugins>

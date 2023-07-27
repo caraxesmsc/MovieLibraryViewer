@@ -7,12 +7,12 @@ import javafx.geometry.Insets;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import org.mp4parser.IsoFile;
-import org.mp4parser.boxes.iso14496.part12.MovieHeaderBox;
-import org.mp4parser.boxes.iso14496.part12.TrackBox;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.attribute.FileTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -135,12 +135,26 @@ public class HelloController implements Initializable {
             int movieCount = Integer.parseInt(properties.getProperty("movie.count"));
             for (int i = 1; i <= movieCount; i++) {
                 Movie movie = new Movie();
+                try {
+                    BasicFileAttributes attrs = Files.readAttributes(filePath, BasicFileAttributes.class);
+
+                    // Get last modified time
+                    FileTime lastModifiedTime = attrs.lastModifiedTime();
+                    System.out.println("Last Modified Time: " + lastModifiedTime);
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+
                 movie.setName(properties.getProperty("movie." + i + ".name"));
-//                movie.setDateAdded(new Date(Long.parseLong(properties.getProperty("movie." + i + ".dateModified"))));
-//                movie.setGenre(properties.getProperty("movie." + i + ".genre"));
-//                movie.setImgsrc(properties.getProperty("movie." + i + ".imgsrc"));
-//                movie.setRating(properties.getProperty("movie." + i + ".rating"));
-//                movie.setWatched(Boolean.parseBoolean(properties.getProperty("movie." + i + ".watched")));
+                movie.setDateAdded(new Date(Long.parseLong(properties.getProperty("movie." + i + ".dateModified"))));
+                movie.setGenre(properties.getProperty("movie." + i + ".genre"));
+                movie.setImgsrc(properties.getProperty("movie." + i + ".imgsrc"));
+                movie.setRating(properties.getProperty("movie." + i + ".rating"));
+                movie.setWatched(Boolean.parseBoolean(properties.getProperty("movie." + i + ".watched")));
 
                 am.add(movie);
             }
