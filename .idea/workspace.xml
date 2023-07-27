@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bce486a-9825-4209-bf8d-7b07dd56840b" name="Changes" comment="Trying to get properties from files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/m/hossam/movielibraryviewer/HelloController.java" afterDir="false" />
-    </list>
+    <list default="true" id="4bce486a-9825-4209-bf8d-7b07dd56840b" name="Changes" comment="Trying to get properties from files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +27,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
