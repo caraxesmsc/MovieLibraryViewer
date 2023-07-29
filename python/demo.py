@@ -1,4 +1,4 @@
-from moviepy.editor import VideoFileClip
+
 
 def read_video_metadata(file_path):
     try:
@@ -24,5 +24,5 @@ def read_video_metadata(file_path):
         print("Error reading video metadata:", str(e))
 
 if __name__ == "__main__":
-    video_file_path = "C:\My_Data\Movies\trial\500 Days Of Summer 2009.mp4"
+    video_file_path = "C:\My_Data\Movies\500 Days Of Summer 2009.mp4"
     read_video_metadata(video_file_path)

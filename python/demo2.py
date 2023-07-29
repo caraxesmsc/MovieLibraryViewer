@@ -11,7 +11,7 @@ def get_video_metadata(file_path):
         return None
 
 # Usage example
-video_file = r'C:\\My_Data\\Movies\\trial\\500 Days Of Summer 2009.mp4'
+video_file = r'C:\\My_Data\\Movies\\500 Days Of Summer 2009.mp4'
 metadata = get_video_metadata(video_file)
 if metadata:
     print(metadata)
