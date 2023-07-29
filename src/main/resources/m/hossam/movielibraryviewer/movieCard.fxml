@@ -4,9 +4,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="60.0" style="-fx-background-radius: 3; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1),10,0,0,10);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m.hossam.movielibraryviewer.movieCardController">
+<AnchorPane fx:id="moviePoster2container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="60.0" style="-fx-background-radius: 4; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1),10,0,0,10);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m.hossam.movielibraryviewer.movieCardController">
    <children>
-      <ImageView fx:id="moviePoster2" blendMode="SRC_ATOP" fitHeight="90.0" fitWidth="60.0" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fx:id="moviePoster2" blendMode="SRC_ATOP" fitHeight="87.0" fitWidth="89.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="1.0">
          <image>
             <Image url="@../../../../java/img/endgme.jpeg" />
          </image>
