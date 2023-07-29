@@ -1,6 +1,7 @@
 import os
 import subprocess
-
+import re
+from datetime import datetime
 def get_video_metadata(file_path):
     try:
         cmd = [r'C:\Users\mdzhs\OneDrive\Documents\Programming Projects\MovieLibraryViewer\MovieLibraryViewer\python\exiftool.exe', file_path]
@@ -38,7 +39,17 @@ def extract_metadata_for_directory(video_directory):
                             desired_metadata_values.append(metadata_value)
 
                 for value in desired_metadata_values:
-                    file.write(value + '\n')
+                    # Check if the value matches a date pattern and format it to dd/mm/yyyy
+                    date_pattern = re.compile(r'\d{4}-\d{2}-\d{2}')
+                    if date_pattern.match(value):
+                        try:
+                            date_obj = datetime.strptime(value, '%Y-%m-%d')
+                            formatted_date = date_obj.strftime('%d/%m/%Y')
+                            file.write(formatted_date + '\n')
+                        except ValueError:
+                            file.write(value + '\n')
+                    else:
+                        file.write(value + '\n')
 
 #*** Example usage for a directory
 video_directory = r'C:\\My_Data\\Movies'
