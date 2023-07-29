@@ -4,14 +4,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.util.converter.LocalDateTimeStringConverter;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -26,7 +32,8 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
-
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import static m.hossam.movielibraryviewer.PythonScriptRunner.pythonScriptRunner;
 
 public class HelloController implements Initializable {
@@ -35,6 +42,19 @@ public class HelloController implements Initializable {
     private HBox cardLayoutRecent;
     @FXML
     private GridPane movieContainer;
+    @FXML
+    private Button Btn12;
+
+    @FXML
+    private Button Btn2;
+
+    @FXML
+    private Button Btn6;
+    @FXML
+    private Label recencyBOX;
+    public int recencyDigit=2;
+    private List<Movie> recentlyAdded;
+    private List<Movie> allMovies;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -75,46 +95,19 @@ public class HelloController implements Initializable {
 
     }
 
-    private List<Movie> recentlyAdded;
-    private List<Movie> allMovies;
-
     private List<Movie> recentlyAdded() {
         List<Movie> ls = new ArrayList<>();
-        Movie movie = new Movie();
-        movie.setName("Avengers Endgame");
-        movie.setDateAdded(new Date(2023, Calendar.JULY, 1));
-        movie.setGenre("Superhero");
-        movie.setImgsrc("/img/endgme.jpeg");
-        movie.setRating("4");
-        movie.setWatched(true);
-        ls.add(movie);
-
-        movie = new Movie();
-        movie.setName("Oppenheimer");
-        movie.setDateAdded(new Date(2023, Calendar.JULY, 5));
-        movie.setGenre("Historic");
-        movie.setImgsrc("/img/oppenhiemer.jpg");
-        movie.setRating("4.5");
-        movie.setWatched(true);
-        ls.add(movie);
-        movie = new Movie();
-        movie.setName("Oppenheimer");
-        movie.setDateAdded(new Date(2023, Calendar.JULY, 23));
-        movie.setGenre("Historic");
-        movie.setImgsrc("/img/oppenhiemer.jpg");
-        movie.setRating("4.5");
-        movie.setWatched(true);
-        ls.add(movie);
-        movie = new Movie();
-        movie.setName("Oppenheimer");
-        movie.setDateAdded(new Date(2023, Calendar.JULY, 5));
-        movie.setGenre("Historic");
-        movie.setImgsrc("/img/untit.jpg");
-        movie.setRating("4.5");
-        movie.setWatched(true);
-        ls.add(movie);
-
-// Sort the movies based on their dateAdded using the custom comparator
+        LocalDateTime currentDateTime = LocalDateTime.now();
+       try {
+            for (int i = 0; i < allMovies.size(); i++) {
+                if (allMovies.get(i).getDateAdded().isAfter(currentDateTime.minusMonths(getRecency()))) {
+                    ls.add(allMovies.get(i));
+                }
+            }
+        }catch (Exception e){
+           System.out.println("list is null");
+       }
+        //Sort the movies based on their dateAdded using the custom comparator
         Collections.sort(ls, Movie.DATE_ADDED_COMPARATOR.reversed());
 
         // Now the movies list is sorted based on their dateAdded
@@ -146,36 +139,86 @@ public class HelloController implements Initializable {
 
         for (File file : files) {
             if (file.isFile() && file.getName().endsWith(".txt")) {
+                ArrayList<String> linesX = null;
                 try {
                     // Open the file for reading
                     BufferedReader reader = new BufferedReader(new FileReader(file));
+                    // ArrayList to store the lines from the file
+                    linesX = new ArrayList<>();
 
                     String line;
                     while ((line = reader.readLine()) != null) {
-                        // Assuming each line contains data for one movie and is formatted accordingly
-                        // Example: name;dateAdded;genre;imgsrc;rating;watched
-                        String[] movieData = line.split(";");
-
-                        Movie movie = new Movie();
-                        movie.setName(movieData[0]);
-                        movie.setDateAdded(new Date(Long.parseLong(movieData[1])));
-                        movie.setGenre(movieData[2]);
-                        movie.setImgsrc(movieData[3]);
-                        movie.setRating(String.valueOf(Double.parseDouble(movieData[4])));
-                        movie.setWatched(Boolean.parseBoolean(movieData[5]));
-                        am.add(movie);
+                        // Store each line in the array
+                        linesX.add(line);
                     }
+                    // Close the file
+                    reader.close();
+
                 } catch (Exception e) {
                     System.out.println("Error reading properties from file: " + file.getName());
-                    e.printStackTrace();
                 }
+
+                Movie movie = new Movie();
+                movie.setName(linesX.get(0));
+                try {
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ssXXX");
+                    movie.setDateAdded(LocalDateTime.parse(linesX.get(1), formatter));
+                }catch (Exception a0){
+                    System.out.println("Error with Date for: "+linesX.get(0));
+                }
+                if (linesX.size()>1) {
+                    try {
+                        movie.setGenre(linesX.get(2));
+                    }catch (Exception a1){
+                        System.out.println("Error with Genre for: "+linesX.get(0));
+                    }
+                    try {
+                    movie.setImgsrc(linesX.get(3));
+                    }catch (Exception a2){
+                        System.out.println("Error with IMGSRC for: "+linesX.get(0));
+                    }
+                    try {
+                    movie.setRating(String.valueOf(Double.parseDouble(linesX.get(4))));
+                    }catch (Exception a3){
+                        System.out.println("Error with Rating for: "+linesX.get(0));
+                    }
+                    try {
+                    movie.setWatched(Boolean.parseBoolean(linesX.get(5)));
+                    }catch (Exception a4){
+                        System.out.println("Error with Watched for: "+linesX.get(0));
+                    }
+                }
+                am.add(movie);
 
             }
         }
                 // Sort the movies based on their name using the custom comparator
-                Collections.sort(am, Movie.NAME_COMPARATOR);
+                // Collections.sort(am, Movie.NAME_COMPARATOR);
 
                 return am;
+    }
+
+    private int getRecency() {
+        recencyBOX.setText(recencyDigit+" month");
+        return recencyDigit;
+    }
+    @FXML
+    public void setRecency2() {
+        recencyDigit=2;
+        recencyBOX.setText(recencyDigit+" month");
+        recentlyAdded();
+    }
+    @FXML
+    public void setRecency6() {
+        recencyDigit=6;
+        recencyBOX.setText(recencyDigit+" month");
+        recentlyAdded();
+    }
+    @FXML
+    public void setRecency12() {
+        recencyDigit=12;
+        recencyBOX.setText(recencyDigit+" month");
+        recentlyAdded();
     }
 }
 

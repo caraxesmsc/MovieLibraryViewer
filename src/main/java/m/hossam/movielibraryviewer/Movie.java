@@ -1,5 +1,6 @@
 package m.hossam.movielibraryviewer;
 
+import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.Date;
 
@@ -8,7 +9,7 @@ public class Movie  {
     private String genre;
     private String rating;
     private String imgsrc;
-    private Date dateAdded;
+    private LocalDateTime dateAdded;
     private Boolean watched;
 
     public String getName() {
@@ -51,11 +52,11 @@ public class Movie  {
         this.watched = watched;
     }
 
-    public Date getDateAdded() {
+    public LocalDateTime getDateAdded() {
         return dateAdded;
     }
 
-    public void setDateAdded(Date dateAdded) {
+    public void setDateAdded(LocalDateTime dateAdded) {
         this.dateAdded = dateAdded;
     }
 

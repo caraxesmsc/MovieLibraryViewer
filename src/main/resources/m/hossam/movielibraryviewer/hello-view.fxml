@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,11 +16,52 @@
    <children>
       <VBox layoutX="33.0" layoutY="41.0" prefHeight="347.0" prefWidth="539.0">
          <children>
-            <Label prefHeight="24.0" prefWidth="114.0" style="-fx-text-fill: #EA80FC;" text="Recently Added" textFill="#d500f9">
-               <font>
-                  <Font name="Segoe UI" size="12.0" />
-               </font>
-            </Label>
+            <HBox prefHeight="25.0" prefWidth="581.0">
+               <children>
+                  <HBox prefHeight="25.0" prefWidth="395.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="98.0" style="-fx-text-fill: #EA80FC;" text="Recently Added -" textFill="#d500f9">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="recencyBOX" prefHeight="24.0" prefWidth="102.0" style="-fx-text-fill: #EA80FC;" text=" " textFill="#f6c2ff">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="136.0">
+                     <children>
+                        <Button fx:id="Btn2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#setRecency2" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #EA80FC; -fx-text-fill: #520060;" text="2" textAlignment="CENTER" textFill="#520060">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="Btn6" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#setRecency6" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #EA80FC; -fx-text-fill: #520060;" text="6" textAlignment="CENTER" textFill="#520060">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="Btn12" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#setRecency12" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #EA80FC; -fx-text-fill: #520060;" text="12" textAlignment="CENTER" textFill="#520060">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
             <ScrollPane prefHeight="146.0" prefWidth="539.0">
                <content>
                   <HBox fx:id="cardLayoutRecent" alignment="CENTER_LEFT" prefHeight="124.0" prefWidth="541.0" spacing="20.0" style="-fx-background-color: #121212; -fx-border-color: #121212;">
