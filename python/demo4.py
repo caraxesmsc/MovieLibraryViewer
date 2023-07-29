@@ -49,5 +49,5 @@ def extract_metadata_for_directory(directory):
 
 # Example usage for a directory
 video_directory = r'C:\\My_Data\\Movies'
-output_folder = r'C:\\My_Data\\Movies\\metadata_files'
+output_folder = r'C:\\My_Data\\Movies\\metadata_filess'
 extract_metadata_for_directory(video_directory, output_folder)
