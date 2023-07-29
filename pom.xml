@@ -38,11 +38,6 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.bytedeco</groupId>
-      <artifactId>javacpp-ffmpeg</artifactId>
-      <version>1.5.6-1.5.6</version>
-    </dependency>
 
 
   </dependencies>
