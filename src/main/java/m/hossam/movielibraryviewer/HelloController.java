@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.util.converter.LocalDateTimeStringConverter;
 
 import java.awt.*;
@@ -58,9 +59,15 @@ public class HelloController implements Initializable {
     public int recencyDigit=2;
     public List<Movie> recentlyAdded;
     public List<Movie> allMovies;
+    @FXML
+    private VBox rootVBox; // Add this field
 
+    @FXML
+    private ScrollPane scrollPane; // Add this field
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        rootVBox.prefWidthProperty().bind(scrollPane.widthProperty());
+        rootVBox.prefHeightProperty().bind(scrollPane.heightProperty());
         recentlyAdded = new ArrayList<>(recentlyAdded());
         allMovies = new ArrayList<>(allMovies());
         int coloumn = 1;
